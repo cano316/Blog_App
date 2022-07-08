@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+
+    <p>
+        <% for( let entry of entries ) { %>
+            <div>
+                <h2>
+                    <%= entry.title %>
+                </h2>
+                <p>
+                    <%= entry.post %>
+                </p>
+                <a href="/posts/<%= entry.title %>" type="button" class="btn btn-success">Details</a>
+            </div>
+            <% } %>
+    </p>
+    <br>
+    <a type="button" class="btn btn-primary" href="/compose">New Entry</a>
+
+    <%- include('partials/footer') %>
